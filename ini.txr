@@ -1,0 +1,22 @@
+@(collect)
+[@{section}]
+@	(collect)
+@		(cases)
+@var=@val
+@		(or)
+@/\s*;/
+@		(end)
+@	(until)
+@; Collect until a new section or EOF
+@/\[\w+\]/
+@	(end)
+@(end)
+@(output)
+@	(repeat)
+@{section} = {
+@		(repeat)
+    "@var": "@val",
+@		(end)
+}
+@	(end)
+@(end)
